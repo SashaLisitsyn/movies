@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 
-import './Search.css';
+import './styles.css';
 
-export default function Search(props) {
+const Search = props => {
   const { searchMovies = Function.prototype } = props;
 
   const [search, setSearch] = useState('');
@@ -12,12 +12,12 @@ export default function Search(props) {
     if (e.key === 'Enter') {
       searchMovies(search, type);
     }
-  };
+  }
 
   const handleFilter = (e) => {
     setType(e.target.dataset.type);
     searchMovies(search, e.target.dataset.type);
-  };
+  }
 
   return (
     <div>
@@ -84,5 +84,7 @@ export default function Search(props) {
         </label>
       </div>
     </div>
-  );
+  )
 }
+
+export default Search;

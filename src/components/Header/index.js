@@ -1,7 +1,7 @@
-import './Header.css';
+import './styles.css';
 
-export default function Header() {
-  return (
+const Header = () => {
+  return(
     <nav className="teal darken-1">
       <div className="nav-wrapper">
         <a
@@ -12,5 +12,7 @@ export default function Header() {
         </a>
       </div>
     </nav>
-  );
+  )
 }
+
+export default Header;

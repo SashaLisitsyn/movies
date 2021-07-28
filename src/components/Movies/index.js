@@ -1,8 +1,8 @@
-import Movie from './Movie';
+import './styles.css';
 
-import './Movies.css';
+import Movie from '../Movie';
 
-export default function Movies(props) {
+const Movies = props => {
   const { movies = [] } = props;
 
   return (
@@ -13,5 +13,7 @@ export default function Movies(props) {
         <h4></h4>
       )}
     </div>
-  );
+  )
 }
+
+export default Movies;

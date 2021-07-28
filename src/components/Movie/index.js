@@ -1,6 +1,6 @@
-import './Movie.css';
+import './styles.css';
 
-export default function Movie(props) {
+const  Movie = props => {
   const {
     Title: title,
     Year: year,
@@ -9,7 +9,7 @@ export default function Movie(props) {
     Poster: poster,
   } = props;
 
-  return (
+  return(
     <div id={id} className="card movie">
       <div className="card-image waves-effect waves-block waves-light">
         {poster === 'N/A' ? (
@@ -30,5 +30,7 @@ export default function Movie(props) {
         </p>
       </div>
     </div>
-  );
+  )
 }
+
+export default Movie;

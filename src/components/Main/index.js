@@ -1,13 +1,14 @@
-import React, { useState, useEffect } from 'react';
-import Movies from './Movies';
-import Search from './Search';
-import Preloader from './Preloader';
+import { useState, useEffect } from 'react';
 
-import './Main.css';
+import './styles.css';
+
+import Movies from '../Movies';
+import Search from '../Search';
+import Preloader from '../Preloader';
 
 const API_KEY = process.env.REACT_APP_API_KEY;
 
-export default function Main() {
+const Main = () => {
   const [movies, setMovies] = useState([]);
   const [loading, setLoading] = useState(true);
 
@@ -26,8 +27,8 @@ export default function Main() {
       .catch((err) => {
         console.error(err);
         setLoading(false);
-      });
-  };
+      })
+  }
 
   useEffect(() => {
     fetch(`https://www.omdbapi.com/?apikey=${API_KEY}&s=`)
@@ -39,13 +40,15 @@ export default function Main() {
       .catch((err) => {
         console.error(err);
         setLoading(false);
-      });
-  }, []);
+      })
+  }, [])
 
-  return (
+  return(
     <main className="container content">
       <Search searchMovies={searchMovies} />
       {loading ? <Preloader /> : <Movies movies={movies} />}
     </main>
-  );
+  )
 }
+
+export default Main;
