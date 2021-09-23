@@ -21,6 +21,6 @@
 3. JS.
 4. API.
 5. React.
-6. React hooks.
+6. REST API.
 
 https://sashalisitsyn.github.io/movies/
