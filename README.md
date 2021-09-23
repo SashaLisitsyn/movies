@@ -19,8 +19,7 @@
 1. HTML.
 2. CSS.
 3. JS.
-4. API.
-5. React.
-6. REST API.
+4. React.
+5. REST API.
 
 https://sashalisitsyn.github.io/movies/
